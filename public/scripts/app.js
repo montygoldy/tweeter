@@ -8,7 +8,17 @@
 
 $(document).ready(function(){
 
-  $('form').on("submit", function(event){
+  // Initially hide the new tweet form section
+
+  $("section.new-tweet").hide();
+
+  // On click event to toggle the form
+
+  $("#compose").on("click", () => {
+    $("section.new-tweet").slideToggle();
+  });
+
+  $('form').on("submit", (event) =>{
     event.preventDefault();
     let serialize = $(this).serialize();
     console.log(serialize);
@@ -17,10 +27,12 @@ $(document).ready(function(){
       method: 'POST',
       data: serialize,
       success: function(data){
-        console.log("success" + data);
+        console.log("success");
       }
     })
-  })
+  });
+
+// Function to load tweets through ajax get method
 
   function loadTweets(){
       $.ajax({
@@ -35,6 +47,8 @@ $(document).ready(function(){
 
   loadTweets();
 
+  // Function to render the tweets by looping through the database tweets
+
   function renderTweets(tweets){
     for(let tweet in tweets){
       tweetObject = tweets[tweet];
@@ -43,6 +57,7 @@ $(document).ready(function(){
     }
   }
 
+  // Function to create dynamic new tweets
 
   function createTweetElement(object){
     $tweet = $("<article>").addClass("tweets");
@@ -53,7 +68,7 @@ $(document).ready(function(){
     $tweetBody = $("<p>").addClass("body").text(object.content.text);
     $footer = $("<footer>");
 
-    // get days
+    // method to the time lapse
 
     $countDays = Math.floor((Date.now() - object.created_at) / (1000 * 60 * 60 * 24));
 
