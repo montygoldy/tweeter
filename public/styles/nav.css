@@ -5,6 +5,7 @@
   background: #00a087;
   color:#e8fdff;
   padding: 0 2em;
+  z-index:1000;
 }
 
 
@@ -20,3 +21,36 @@
   line-height:80px;
   font-size:32px;
 }
+
+#nav-bar button#compose{
+  border: 1px solid #666;
+  padding:.8em .5em;
+  border-radius: 5px;
+  font-family:'Roboto', sans-serif !important;
+  font-size:1.2em;
+  background: #fff;
+  opacity:.8;
+  margin:10px auto;
+  position:absolute;
+  left:58%;
+  color:#00a087;
+  transition:all .4s;
+  box-shadow:1px 1px 6px rgba(0,0,0,.7);
+}
+
+#nav-bar button#compose:hover{
+  opacity:1;
+  cursor:pointer;
+  color:#264851;
+  transition:all .4s;
+  box-shadow:none;
+}
+
+
+
+
+
+
+
+
+

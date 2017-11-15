@@ -1,0 +1,178 @@
+section#tweets_container{
+  margin: 1em 0;
+}
+
+section#tweets_container article.tweets{
+ border:1px solid #ccc;
+  border-radius: 5px;
+  overflow:hidden;
+  margin:1em 0;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets:hover{
+  border:1px solid #666!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets header{
+  background-color: #F3F3F3;
+  padding:.7em;
+  clear:both;
+  overflow:hidden;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets:hover header{
+  background:#EEEEEE!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets header img{
+  float:left;
+  border-radius:5px;
+  width:50;
+  height:50;
+  margin-right:.8em;
+  opacity:.8;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets:hover header img{
+  opacity:1!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+
+section#tweets_container article.tweets header h2{
+  float:left;
+  color:#667E85;
+  font-size:1.4em;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets:hover header h2{
+  color:#244751!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+
+section#tweets_container article.tweets header a.user_link{
+  float:right;
+  color:#A0A0A0;
+  line-height:1.8em;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+section#tweets_container article.tweets:hover a.user_link{
+  color: #7B7B7B!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+  }
+
+section#tweets_container article.tweets p.body{
+  padding: 1.8em 1em;
+  font-size: 1.05em;
+}
+
+
+section#tweets_container article.tweets footer{
+  clear:both;
+   overflow:hidden;
+   border-top: 1px solid #f3f3f3;
+   padding: .8em 1em;
+}
+
+section#tweets_container article.tweets footer small{
+  color: #244751;
+  float:left;
+}
+
+section#tweets_container article.tweets footer .icons{
+  float:right;
+}
+
+
+
+section#tweets_container article.tweets footer .icons i.fa-flag{
+  opacity:0!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .2s;
+}
+
+section#tweets_container article.tweets footer .icons i.fa-retweet{
+  opacity:0!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+  transition-delay: .1s;
+}
+
+section#tweets_container article.tweets footer .icons i.fa-heart{
+  opacity:0!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+  transition-delay: .2s;
+}
+
+section#tweets_container article.tweets:hover footer .icons i.fa-flag{
+  opacity:1!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+  transition-delay: .2s;
+}
+
+section#tweets_container article.tweets:hover footer .icons i.fa-retweet{
+  opacity:1!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+  transition-delay: .1s;
+}
+
+section#tweets_container article.tweets:hover footer .icons i.fa-heart{
+  opacity:1!important;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+
+}
+
+section#tweets_container article.tweets footer .icons i{
+  float:right;
+  margin-right:10px;
+  color:#66C6B7;
+  -webkit-transition: all .3s; /* Safari */
+  transition: all .3s;
+}
+
+
+section#tweets_container article.tweets footer .icons i:last-child{
+  margin-right:none!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
