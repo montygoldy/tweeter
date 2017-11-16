@@ -46,7 +46,7 @@
   box-shadow:none;
 }
 
-#nav-bar button#compose::focus {
+button:focus, input:focus {
   outline:0 !important;
 }
 

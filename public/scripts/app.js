@@ -14,22 +14,42 @@ $(document).ready(function(){
 
   // On click event to toggle the form
 
-  $("#compose").on("click", () => {
+  $("#compose").on("click", function(){
     $("section.new-tweet").slideToggle();
   });
 
-  $('form').on("submit", (event) =>{
+  $('form').on("submit", function(event){
     event.preventDefault();
     let serialize = $(this).serialize();
-    console.log(serialize);
-    $.ajax({
-      url: 'http://localhost:8080/tweets',
-      method: 'POST',
-      data: serialize,
-      success: function(data){
-        console.log("success");
-      }
-    })
+    let textareaVal = $(this).find("textarea").val();
+
+      // Condition to check null or empty  or characters more than 140 in textarea
+
+    if( !textareaVal || textareaVal === null){
+      $("form").append('<div class="error">Cannot post empty tweet. Please add something!</div>');
+      setTimeout(function(){
+        $('.error').fadeOut();;
+      }, 4000);
+
+    } else if (textareaVal.length > 140){
+      $("form").append('<div class="error">Your tweet is far too long</div>');
+      setTimeout(function(){
+        $('.error').fadeOut();;
+      }, 4000);
+
+    } else{
+      $.ajax({
+        url: 'http://localhost:8080/tweets',
+        method: 'POST',
+        data: serialize,
+        success: function(){
+          console.log("success");
+          loadTweets()
+          $("textarea").val("");
+          $(".counter").text(140);
+        }
+      })
+    }
   });
 
 // Function to load tweets through ajax get method
@@ -53,7 +73,7 @@ $(document).ready(function(){
     for(let tweet in tweets){
       tweetObject = tweets[tweet];
       $tweet = createTweetElement(tweetObject);
-      $("#tweets_container").append($tweet);
+      $("#tweets_container").prepend($tweet);
     }
   }
 
