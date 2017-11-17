@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "./node_modules/node-sass/bin/node-sass --watch --recursive --output public/styles public/saas",
     "start": "node server/index.js",
     "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
   },
@@ -15,7 +16,8 @@
     "chance": "^1.0.2",
     "express": "^4.16.2",
     "md5": "^2.1.0",
-    "mongodb": "^2.2.33"
+    "mongodb": "^2.2.33",
+    "node-sass-middleware": "^0.11.0"
   },
   "devDependencies": {
     "nodemon": "^1.9.2"

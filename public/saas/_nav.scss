@@ -1,0 +1,64 @@
+@mixin transition($property, $time) {
+  -webkit-transition: $property, $time;
+   transition: $property, $time;
+}
+
+#nav-bar{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: #00a087;
+  color:#e8fdff;
+  padding: 0 2em;
+  z-index:1000;
+
+  img{
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .header{
+    float:left;
+    line-height:80px;
+    font-size:32px;
+  }
+
+  button#compose{
+    border: 1px solid #666;
+    padding:.8em .5em;
+    border-radius: 5px;
+    font-family:$primary-font !important;
+    font-size:1.2em;
+    background: #fff;
+    opacity:.8;
+    margin:10px auto;
+    position:absolute;
+    left:58%;
+    color:#00a087;
+     @include transition(all, .4s);
+    box-shadow:1px 1px 6px rgba(0,0,0,.7);
+  }
+  button#compose:hover{
+    opacity:1;
+    cursor:pointer;
+    color:#264851;
+    @include transition(all, .4s);
+    box-shadow:none;
+  }
+}
+
+
+
+button:focus, input:focus {
+  outline:0 !important;
+}
+
+
+
+
+
+
+
+

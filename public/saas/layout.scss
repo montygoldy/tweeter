@@ -1,0 +1,47 @@
+$primary-color: #244751;
+$primary-font: 'Roboto', sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin:0;
+  padding:0;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  margin: 0;
+  color: $primary-color;
+  background-color: #eee;
+  font-family: $primary-font;
+}
+
+@import 'nav';
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ main.container{
+  width: 450px;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left:2em;
+  padding-right:2em;
+  padding-bottom:140px;
+ }
+
+
+a{
+  text-decoration:none;
+}
+
+
+@import 'new-tweet';
+@import 'tweet';

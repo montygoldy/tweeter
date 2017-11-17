@@ -1,43 +1,229 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
+
 *, *:before, *:after {
   box-sizing: inherit;
-  margin:0;
-  padding:0;
-}
+  margin: 0;
+  padding: 0; }
 
 /*
  * Global layout stuff
  */
-
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: "Roboto", sans-serif; }
+
+#nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: #00a087;
+  color: #e8fdff;
+  padding: 0 2em;
+  z-index: 1000; }
+  #nav-bar img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-right: 10px; }
+  #nav-bar .header {
+    float: left;
+    line-height: 80px;
+    font-size: 32px; }
+  #nav-bar button#compose {
+    border: 1px solid #666;
+    padding: .8em .5em;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif !important;
+    font-size: 1.2em;
+    background: #fff;
+    opacity: .8;
+    margin: 10px auto;
+    position: absolute;
+    left: 58%;
+    color: #00a087;
+    -webkit-transition: all, 0.4s;
+    transition: all, 0.4s;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); }
+  #nav-bar button#compose:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: #264851;
+    -webkit-transition: all, 0.4s;
+    transition: all, 0.4s;
+    box-shadow: none; }
+
+button:focus, input:focus {
+  outline: 0 !important; }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- main.container{
+main.container {
   width: 450px;
   background: #fff;
   margin: 0 auto;
   padding-top: 100px;
-  padding-left:2em;
-  padding-right:2em;
-  padding-bottom:140px;5
- }
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 140px; }
 
+a {
+  text-decoration: none; }
 
-a{
-  text-decoration:none;
-}
+section.new-tweet {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #EEEEEE;
+  position: relative; }
+  section.new-tweet h2 {
+    border-bottom: 2px solid #244751;
+    margin-bottom: 12px;
+    padding-bottom: 6px; }
+  section.new-tweet form {
+    clear: both;
+    overflow: hidden; }
+    section.new-tweet form textarea {
+      width: 100%;
+      height: 60px;
+      padding: 6px 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 6px; }
+    section.new-tweet form input[type="submit"] {
+      float: left;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      background-color: #e9e9e9;
+      cursor: pointer;
+      transition: all .4s; }
+    section.new-tweet form input[type="submit"]:hover {
+      background: #fff;
+      border: 1px solid #244751;
+      color: #244751;
+      transition: all .4s; }
+    section.new-tweet form span.counter {
+      float: right;
+      margin-top: 8px; }
+    section.new-tweet form span.alert {
+      color: red !important; }
+    section.new-tweet form .error {
+      position: absolute;
+      z-index: 10;
+      bottom: -15%;
+      background: tomato;
+      padding: .6em;
+      border-radius: 5px;
+      opacity: .8;
+      color: #fff; }
+
+section#tweets_container {
+  margin: 1em 0;
+  /* article */ }
+  section#tweets_container article.tweets {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    section#tweets_container article.tweets header {
+      background-color: #F3F3F3;
+      padding: .7em;
+      clear: both;
+      overflow: hidden;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+      section#tweets_container article.tweets header img {
+        float: left;
+        border-radius: 5px;
+        width: 50;
+        height: 50;
+        margin-right: .8em;
+        opacity: .8;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+      section#tweets_container article.tweets header h2 {
+        float: left;
+        color: #667E85;
+        font-size: 1.4em;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+      section#tweets_container article.tweets header a.user_link {
+        float: right;
+        color: #A0A0A0;
+        line-height: 1.8em;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+    section#tweets_container article.tweets p.body {
+      padding: 1.8em 1em;
+      font-size: 1.05em; }
+    section#tweets_container article.tweets footer {
+      clear: both;
+      overflow: hidden;
+      border-top: 1px solid #f3f3f3;
+      padding: .8em 1em; }
+      section#tweets_container article.tweets footer small {
+        color: #244751;
+        float: left; }
+      section#tweets_container article.tweets footer .icons {
+        float: right; }
+        section#tweets_container article.tweets footer .icons i {
+          float: right;
+          margin-right: 10px;
+          color: #66C6B7;
+          -webkit-transition: all, 0.3s;
+          transition: all, 0.3s; }
+        section#tweets_container article.tweets footer .icons i:last-child {
+          margin-right: none !important; }
+        section#tweets_container article.tweets footer .icons i.fa-flag {
+          opacity: 0 !important;
+          -webkit-transition: all, 0.3s;
+          transition: all, 0.3s; }
+        section#tweets_container article.tweets footer .icons i.fa-retweet {
+          opacity: 0 !important;
+          -webkit-transition: all, 0.3s;
+          transition: all, 0.3s;
+          transition-delay: .1s; }
+        section#tweets_container article.tweets footer .icons i.fa-heart {
+          opacity: 0 !important;
+          -webkit-transition: all, 0.3s;
+          transition: all, 0.3s;
+          transition-delay: .2s; }
+  section#tweets_container article.tweets:hover {
+    border: 1px solid #666 !important;
+    -webkit-transition: all, 0.3s;
+    transition: all, 0.3s; }
+    section#tweets_container article.tweets:hover header {
+      background: #EEEEEE !important;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+      section#tweets_container article.tweets:hover header img {
+        opacity: 1 !important;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+      section#tweets_container article.tweets:hover header h2 {
+        color: #244751 !important;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+      section#tweets_container article.tweets:hover header a.user_link {
+        color: #7B7B7B !important;
+        -webkit-transition: all, 0.3s;
+        transition: all, 0.3s; }
+    section#tweets_container article.tweets:hover footer .icons i.fa-flag {
+      opacity: 1 !important;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s;
+      transition-delay: .2s; }
+    section#tweets_container article.tweets:hover footer .icons i.fa-retweet {
+      opacity: 1 !important;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s;
+      transition-delay: .1s; }
+    section#tweets_container article.tweets:hover footer .icons i.fa-heart {
+      opacity: 1 !important;
+      -webkit-transition: all, 0.3s;
+      transition: all, 0.3s; }
+
+/* Tweet container */

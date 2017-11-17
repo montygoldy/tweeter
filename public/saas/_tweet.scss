@@ -1,0 +1,145 @@
+
+
+section#tweets_container{
+  margin: 1em 0;
+
+  article.tweets{
+    border:1px solid #ccc;
+    border-radius: 5px;
+    overflow:hidden;
+    margin:1em 0;
+    @include transition(all, .3s);
+
+    header{
+      background-color: #F3F3F3;
+      padding:.7em;
+      clear:both;
+      overflow:hidden;
+      @include transition(all, .3s);
+
+       img{
+        float:left;
+        border-radius:5px;
+        width:50;
+        height:50;
+        margin-right:.8em;
+        opacity:.8;
+        @include transition(all, .3s);
+        }
+
+        h2{
+          float:left;
+          color:#667E85;
+          font-size:1.4em;
+          @include transition(all, .3s);
+        }
+
+        a.user_link{
+          float:right;
+          color:#A0A0A0;
+          line-height:1.8em;
+          @include transition(all, .3s);
+        }
+      }
+
+      p.body{
+        padding: 1.8em 1em;
+        font-size: 1.05em;
+      }
+
+      footer{
+        clear:both;
+        overflow:hidden;
+        border-top: 1px solid #f3f3f3;
+        padding: .8em 1em;
+
+        small{
+          color: $primary-color;
+          float:left;
+        }
+
+        .icons{
+          float:right;
+
+          i{
+            float:right;
+            margin-right:10px;
+            color:#66C6B7;
+            @include transition(all, .3s);
+          }
+
+          i:last-child{
+            margin-right:none!important;
+          }
+
+          i.fa-flag{
+            opacity:0!important;
+            @include transition(all, .3s);
+          }
+
+          i.fa-retweet{
+            opacity:0!important;
+            @include transition(all, .3s);
+            transition-delay: .1s;
+          }
+
+          i.fa-heart{
+            opacity:0!important;
+            @include transition(all, .3s);
+            transition-delay: .2s;
+          }
+        }
+      }
+    }
+
+
+  article.tweets:hover{
+    border:1px solid #666!important;
+    @include transition(all, .3s);
+
+    header{
+      background:#EEEEEE!important;
+      @include transition(all, .3s);
+
+      img{
+        opacity:1!important;
+        @include transition(all, .3s);
+      }
+
+      h2{
+        color:$primary-color!important;
+        @include transition(all, .3s);
+      }
+
+      a.user_link{
+      color: #7B7B7B!important;
+      @include transition(all, .3s);
+      }
+    }
+
+    footer{
+      .icons{
+        i.fa-flag{
+          opacity:1!important;
+          @include transition(all, .3s);
+          transition-delay: .2s;
+        }
+
+        i.fa-retweet{
+          opacity:1!important;
+          @include transition(all, .3s);
+          transition-delay: .1s;
+        }
+
+        i.fa-heart{
+          opacity:1!important;
+          @include transition(all, .3s);
+
+        }
+      }
+    }
+  } /* article */
+}  /* Tweet container */
+
+
+
