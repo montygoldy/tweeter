@@ -15,6 +15,7 @@ html {
  */
 
 body {
+  width:100%;
   margin: 0;
   color: $primary-color;
   background-color: #eee;
@@ -45,3 +46,27 @@ a{
 
 @import 'new-tweet';
 @import 'tweet';
+
+
+@media (max-width:480px){
+
+  main.container{
+    width:100%;
+    padding-left:1em;
+    padding-right:1em;
+
+  }
+}
+
+@media (min-width:480px) and (max-width:768px){
+
+  main.container{
+    width:80%;
+    padding-left:1em;
+    padding-right:1em;
+
+  }
+}
+
+
+

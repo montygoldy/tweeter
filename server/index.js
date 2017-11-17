@@ -6,7 +6,7 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
-const sassMiddleware = require('node-sass-middleware')
+const sassMiddleware = require('node-sass-middleware');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

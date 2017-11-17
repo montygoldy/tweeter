@@ -55,6 +55,30 @@ button:focus, input:focus {
   outline:0 !important;
 }
 
+@media (max-width:480px){
+  #nav-bar{
+    height: auto;
+
+    img{
+      width: 80px;
+      height: 80px;
+      display:inline-block;
+    }
+
+    .header {
+      font-size: 30px;
+      text-align:center;
+      display:none;
+    }
+
+    button#compose{
+      font-size:1em;
+      margin:20px auto;
+      position:inherit;
+      display:block;
+    }
+  }
+}
 
 
 

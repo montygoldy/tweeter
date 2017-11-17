@@ -10,6 +10,7 @@ html {
  * Global layout stuff
  */
 body {
+  width: 100%;
   margin: 0;
   color: #244751;
   background-color: #eee;
@@ -57,6 +58,23 @@ body {
 
 button:focus, input:focus {
   outline: 0 !important; }
+
+@media (max-width: 480px) {
+  #nav-bar {
+    height: auto; }
+    #nav-bar img {
+      width: 80px;
+      height: 80px;
+      display: inline-block; }
+    #nav-bar .header {
+      font-size: 30px;
+      text-align: center;
+      display: none; }
+    #nav-bar button#compose {
+      font-size: 1em;
+      margin: 20px auto;
+      position: inherit;
+      display: block; } }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
@@ -120,12 +138,12 @@ section.new-tweet {
       color: #fff; }
 
 section#tweets_container {
-  margin: 1em 0;
-  /* article */ }
+  margin: 1em 0; }
   section#tweets_container article.tweets {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
+    margin: 1em 0;
     -webkit-transition: all, 0.3s;
     transition: all, 0.3s; }
     section#tweets_container article.tweets header {
@@ -226,4 +244,14 @@ section#tweets_container {
       -webkit-transition: all, 0.3s;
       transition: all, 0.3s; }
 
-/* Tweet container */
+@media (max-width: 480px) {
+  main.container {
+    width: 100%;
+    padding-left: 1em;
+    padding-right: 1em; } }
+
+@media (min-width: 480px) and (max-width: 768px) {
+  main.container {
+    width: 80%;
+    padding-left: 1em;
+    padding-right: 1em; } }
