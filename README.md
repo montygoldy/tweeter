@@ -21,8 +21,7 @@ Tweeter is a simple, single-page Twitter clone. A simple single-page AJAX-based 
 
 Screenshots
 
-!["Screenshot for registration page"](https://github.com/montygoldy/TinyApp/blob/5a5924446d47dcd9ee86b4e8c8044e22eed62cbd/docs/registration-page.png?raw=true)
+!["Screenshot for registration page"](https://github.com/montygoldy/tweeter/blob/master/docs/Screen%20Shot%202017-11-16%20at%2011.58.43%20PM.png?raw=true)
 
-![Screenshot for urls_show page](https://raw.githubusercontent.com/montygoldy/TinyApp/5a5924446d47dcd9ee86b4e8c8044e22eed62cbd/docs/url_show_page.png)
+![Screenshot for urls_show page](https://github.com/montygoldy/tweeter/blob/master/docs/Screen%20Shot%202017-11-16%20at%2011.59.09%20PM.png?raw=true)
 
-![Screenshot for urls_index_page](https://raw.githubusercontent.com/montygoldy/TinyApp/5a5924446d47dcd9ee86b4e8c8044e22eed62cbd/docs/urls_index_page.png)
